@@ -1,0 +1,11 @@
+<!--selectHero默认为undefined-->
+<!--当selectHero有值的时候才显示-->
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}}</h2>
+  <div> <span>id:</span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input type="text" [(ngModel)]="hero.name">
+    </label>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div *ngIf="wyyService.messages.length">
+  <h2>hero Messages</h2>
+  <button class="clear" (click)="wyyService.clear()">clear</button>
+
+  <div *ngFor="let message of wyyService.messages">{{message}}</div>
+
+</div>
