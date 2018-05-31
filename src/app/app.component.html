@@ -1,2 +1,9 @@
-<app-heroes></app-heroes>
+<h1>{{title}}</h1>
+<!--<app-heroes></app-heroes>-->
+<nav>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/dashboard">dashboard</a>
+</nav>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
+<!--能在 AppComponent 中使用 RouterOutlet，是因为 AppModule 导入了 AppRoutingModule，而 AppRoutingModule 中导出了 RouterModule。-->

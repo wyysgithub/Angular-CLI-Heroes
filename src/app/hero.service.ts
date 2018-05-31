@@ -19,7 +19,12 @@ export class HeroService {
 //   getHeroes():Hero[]{
 //   return HEROES;
 // }
+  getHero(id:number):Observable<Hero>{
+    this.wyyMessageService.add(`find id : ${id}`);
+    // 像 getHeroes() 一样，getHero() 也有一个异步函数签名。 它用 RxJS 的 of() 函数返回一个 Observable 形式的模拟英雄数据。
+    return of(HEROES.find(hero=>hero.id===id));
 
+  }
 
   constructor(private wyyMessageService:MessageService) { }
   getHeroes():Observable<Hero[]>{
